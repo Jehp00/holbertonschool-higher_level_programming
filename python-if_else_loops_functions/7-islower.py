@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-Minusculas = 'abcdefghijklmnñopqrstuvwxyz'
 def islower(c):
-    if c in Minusculas:
+    if ord(c) > 98 and ord(c) < 123:
         return True
     else:
         return False
