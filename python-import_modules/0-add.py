@@ -1,4 +1,8 @@
 #!/usr/bin/python3
 from add_0 import add
-result = add(1, 2)
-print("1 + 2 = {}".format(result))
+def _add_():
+    a = 1
+    b = 2
+    print("{} + {} = {}".format(a, b, add(a, b)))
+if __name__ == "__main__":
+    _add_()
