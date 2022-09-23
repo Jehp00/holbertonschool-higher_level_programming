@@ -2,7 +2,7 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     a = [0, 0]
     b = [0, 0]
-    for i, idx in enumerate(tuple_a):
+    for idx, i in enumerate(tuple_a):
         if idx < 2:
             a[idx] = tuple_a[idx]
     for idx, i in enumerate(tuple_b):
