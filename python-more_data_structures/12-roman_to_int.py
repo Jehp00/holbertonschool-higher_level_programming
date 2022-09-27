@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    num_roman = {
+    n_rom = {
         'I': 1,
         'V': 5,
         'X': 10,
@@ -16,8 +16,8 @@ def roman_to_int(roman_string):
     if roman_string is None:
         return 0
     for num in range(num, len(len_num)):
-        if num < len(len_num) - 1 and num_roman[len_num[num]] < num_roman[len_num[num + 1]]:
-            value -= num_roman[len_num[num]]
+        if num < len(len_num) - 1 and n_rom[len_num[num]] < n_rom[len_num[num + 1]]:
+            value -= n_rom[len_num[num]]
         else:
-            value += num_roman[len_num[num]]
+            value += n_rom[len_num[num]]
     return value
