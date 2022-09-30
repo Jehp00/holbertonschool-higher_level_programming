@@ -30,7 +30,7 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-    
+
     @property
     def position(self):
         '''Return the property'''
@@ -59,7 +59,7 @@ class Square:
             print()
         for i in range(0, self.__size):
             for x in range(0, self.__position[0]):
-                print("_", end="")
+                print(" ", end="")
             for j in range(0, self.__size):
                 print('#', end="")
             print()
