@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+"""
+Module add-integer
+adds two integer
+"""
+
+
 def add_integer(a, b=98):
+    """Returns the addition between a and b,
+    or error if and or b aren't int or floats"""
+
     if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
     if type(b) is not int and type(b) is not float:
@@ -9,5 +18,5 @@ def add_integer(a, b=98):
         a = int(a)
     if type(b) is float:
         b = int(b)
-    
+
     return a + b
