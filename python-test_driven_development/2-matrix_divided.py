@@ -3,16 +3,17 @@
 Module matrix_divided
 Divides each element of a matrix by a number
 """
+
+
 def matrix_divided(matrix, div):
     '''
     Returns a new matrix with the results
-    of the division of matrix by div with 2 decimals
-    '''
+    of the division of matrix by div with 2 decimals'''
 
     new_matrix = [] 
     if not isinstance(matrix, list) or len(matrix) == 0 or not matrix[0]:
         raise TypeError("matrix must be a matrix (list of lists) " +
-                        "of integers/floats")
+        "of integers/floats")
     for r in matrix:
         if len(r) == 0:
             raise TypeError("matrix must be a matrix (list of lists) " +
