@@ -10,10 +10,10 @@ def matrix_divided(matrix, div):
     Returns a new matrix with the results
     of the division of matrix by div with 2 decimals'''
 
-    new_matrix = [] 
+    new_matrix = []
     if not isinstance(matrix, list) or len(matrix) == 0 or not matrix[0]:
         raise TypeError("matrix must be a matrix (list of lists) " +
-        "of integers/floats")
+                        "of integers/floats")
     for r in matrix:
         if len(r) == 0:
             raise TypeError("matrix must be a matrix (list of lists) " +
@@ -33,7 +33,7 @@ def matrix_divided(matrix, div):
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
-        raise  ZeroDivisionError("division by zero")
+        raise ZeroDivisionError("division by zero")
     new_matrix = [[round(x / div, 2) for x in i] for i in matrix]
 
     return(new_matrix)
