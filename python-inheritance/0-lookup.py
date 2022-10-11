@@ -4,6 +4,8 @@ Module lookup
 returns all the list of available
 attributes and methodsof an object
 """
+
+
 def lookup(obj):
     '''
     returns the attributes and methods'''
