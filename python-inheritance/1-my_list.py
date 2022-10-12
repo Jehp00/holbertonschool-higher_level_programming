@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-Module MyList
-takes a unsorted list and sorted
-the numbers of the list
+Module 1-my_list.
+creates a class inheriting 
+from the list class
 """
 
 
 class MyList(list):
     '''
-    MyList class inheited from
+    MyList class inherited from
     list with nums unsirted'''
     def print_sorted(self):
     '''
