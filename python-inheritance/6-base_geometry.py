@@ -7,7 +7,7 @@ any parameter
 
 
 class BaseGeometry:
-    """BaseGeometry class that give a messege error 
+    """BaseGeometry class that give a messege error
     where the method arrea is not implemented"""
     def area(self):
         '''messege error'''
