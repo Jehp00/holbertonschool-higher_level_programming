@@ -90,12 +90,14 @@ class Rectangle(Base):
         '''Prints the rectangle in the terminal'''
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect_string = ''
+        for y in range(self.__y):
+            print()
         for i in range(self.__height):
+            for x in range(self.__x):
+                print(" ", end="")
             for j in range(self.__width):
-                rect_string += '#'
-            rect_string += '\n'
-        print(rect_string[:-1])
+                print("#", end="")
+            print()
 
     def __str__(self):
         '''method so that it returns [Rectangle]
