@@ -9,6 +9,7 @@ class Base:
     """Class with private attribute and init method
     with the public ittribute id"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         '''Method that assigne a value to the arg id and count the number of obj
         args:
