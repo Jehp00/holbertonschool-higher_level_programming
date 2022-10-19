@@ -87,7 +87,8 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        '''Prints the rectangle in the terminal'''
+        '''Prints the rectangle in the terminal
+        with a given position'''
         if self.__width == 0 or self.__height == 0:
             return ""
         for y in range(self.__y):
