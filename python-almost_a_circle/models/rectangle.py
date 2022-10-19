@@ -87,6 +87,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        '''Prints the rectangle in the terminal'''
         if self.__width == 0 or self.__height == 0:
             return ""
         rect_string = ''
