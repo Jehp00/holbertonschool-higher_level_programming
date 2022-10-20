@@ -120,7 +120,7 @@ class Rectangle(Base):
 
         if len(args) == 4:
             self.id = args[0]
-            self.__width = args[1] 
+            self.__width = args[1]
             self.__height = args[2]
             self.__x = args[3]
 
@@ -161,7 +161,7 @@ class Rectangle(Base):
             for k, v in kwargs.items():
                 if k == "id":
                     self.id = v
-                
+
                 if k == "width":
                     self.width = v
 
