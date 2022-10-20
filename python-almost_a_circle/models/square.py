@@ -22,7 +22,7 @@ class Square(Rectangle):
             x: position of square in eje x
             y: position of square in eje y
         '''
-        self.size = size
+        self.__size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -34,3 +34,17 @@ class Square(Rectangle):
         s = "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
         return s
+
+    @property
+    def size(self):
+        '''getter'''
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        '''setter'''
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be > 0")
+        self.__size = value
