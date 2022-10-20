@@ -22,7 +22,6 @@ class Square(Rectangle):
             x: position of square in eje x
             y: position of square in eje y
         '''
-        self.__size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -38,7 +37,7 @@ class Square(Rectangle):
     @property
     def size(self):
         '''getter'''
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -47,5 +46,5 @@ class Square(Rectangle):
             raise TypeError("size must be an integer")
         if value <= 0:
             raise ValueError("size must be > 0")
-        self.__width = value
-        self.__height = value
+        self.width = value
+        self.height = value
