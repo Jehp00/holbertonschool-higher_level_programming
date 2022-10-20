@@ -108,6 +108,9 @@ class Rectangle(Base):
 
     """def update(self, *args):
         '''updating attributes with args'''
+
+        #lenght is gratter than args failed
+
         if len(args) == 5:
             self.id = args[0]
             self.__width = args[1]
@@ -117,7 +120,7 @@ class Rectangle(Base):
 
         if len(args) == 4:
             self.id = args[0]
-            self.__width = args[1] #In case of the lenght is gratter than expedted ailed
+            self.__width = args[1] 
             self.__height = args[2]
             self.__x = args[3]
 
@@ -133,7 +136,8 @@ class Rectangle(Base):
         if len(args) == 1:
             self.id = args[0]"""
 
-                                    # better way
+# better way
+
     """ c = 0
         self = self.__dict__
         try:
@@ -163,7 +167,6 @@ class Rectangle(Base):
 
                 if k == "height":
                     self.height = v
-
 
                 if k == "y":
                     self.y = v
