@@ -106,7 +106,7 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                 self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    """def update(self, *args):
         '''updating attributes with args'''
         if len(args) == 5:
             self.id = args[0]
@@ -117,7 +117,7 @@ class Rectangle(Base):
 
         if len(args) == 4:
             self.id = args[0]
-            self.__width = args[1]
+            self.__width = args[1] #In case of the lenght is gratter than expedted ailed
             self.__height = args[2]
             self.__x = args[3]
 
@@ -131,4 +131,42 @@ class Rectangle(Base):
             self.__width = args[1]
 
         if len(args) == 1:
-            self.id = args[0]
+            self.id = args[0]"""
+
+                                    # better way
+    """ c = 0
+        self = self.__dict__
+        try:
+            for i in self.keys():
+                self[i] = args[c]
+                c += 1
+        except IndexError:
+            c = c - 1"""
+
+    def update(self, *args, **kwargs):
+        '''updating attributes with args and kwargs'''
+        if args:
+            c = 0
+            try:
+                for i in self.keys():
+                    self[i] = args[c]
+                    c += 1
+            except IndexError:
+                c = c - 1
+        else:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+                
+                if k == "width":
+                    self.width = v
+
+                if k == "height":
+                    self.height = v
+
+
+                if k == "y":
+                    self.y = v
+
+                if k == "x":
+                    self.x = v
