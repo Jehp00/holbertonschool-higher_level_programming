@@ -175,6 +175,7 @@ class Rectangle(Base):
                     self.x = v
 
     def to_dictionary(self):
+        '''dictionary with attr of rectangle'''
         dictionary = {
             'id': self.id,
             'width': self.__width,
@@ -183,4 +184,3 @@ class Rectangle(Base):
             'y': self.__y
         }
         return dictionary
-        
