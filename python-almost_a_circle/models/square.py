@@ -56,7 +56,7 @@ class Square(Rectangle):
             try:
                 c = 0
                 for i in self.keys():
-                    if i == "Rectangle__height":
+                    if i == "Rectangle_height":
                         continue
                     self[i] = args[c]
                     c += 1
