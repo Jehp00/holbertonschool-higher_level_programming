@@ -60,8 +60,8 @@ class Base:
             - json_string: string to convert to list
         """
         str_lis = []
-        if json_string is None or json_string == '':
+        if json_string is not None or json_string == '':
             if type(json_string) is not str:
                 raise TypeError("json_string must be a string")
-            str_lis = json.load(json_string)
+            str_lis = json.loads(json_string)
         return str_lis
