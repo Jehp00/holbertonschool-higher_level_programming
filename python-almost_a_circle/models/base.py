@@ -65,3 +65,18 @@ class Base:
                 raise TypeError("json_string must be a string")
             str_lis = json.loads(json_string)
         return str_lis
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''
+        Instance with attributes already set
+        args:
+            dictionary: like **kwargs
+        Returns new instance
+        '''
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(1, 1)
+        if cls.__name__ == 'Square':
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
