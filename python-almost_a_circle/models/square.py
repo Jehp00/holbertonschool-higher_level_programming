@@ -23,6 +23,7 @@ class Square(Rectangle):
             y: position of square in eje y
         '''
         super().__init__(size, size, x, y, id)
+        self.update()
 
     def __str__(self):
         '''
@@ -47,3 +48,21 @@ class Square(Rectangle):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.width = value
+
+    def update(self, *args, **kwargs):
+        '''updating attributes with args and kwargs'''
+        if args:
+            self = self.__dict__
+            try:
+                c = 0
+                for i in self.keys():
+                    if i == "Rectangle__height":
+                        continue
+                    self[i] = args[c]
+                    c += 1
+            except IndexError:
+                c -= 1
+        if kwargs:
+            if not args:
+                for k, v in kwargs.items():
+                    setattr(self, k, v)
