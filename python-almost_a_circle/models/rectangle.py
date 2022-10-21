@@ -150,6 +150,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         '''updating attributes with args and kwargs'''
         if args:
+            self = self.__dict__
             c = 0
             try:
                 for i in self.keys():
