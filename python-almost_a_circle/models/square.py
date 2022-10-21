@@ -52,17 +52,17 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         '''updating attributes with args and kwargs'''
         if args:
-            self = self.__dict__
+            self = self._dict_
             try:
-                c = 0
-                for i in self.keys():
-                    if i == "Rectangle_height":
+                i = 0
+                for k in self.keys():
+                    if k == "Rectangle_height":
                         continue
-                    self[i] = args[c]
-                    c += 1
+                    self[k] = args[i]
+                    i += 1
             except IndexError:
-                c -= 1
+                i = i - 1
         if kwargs:
             if not args:
-                for k, v in kwargs.items():
-                    setattr(self, k, v)
+                for key, value in kwargs.items():
+                    setattr(self, key, value)
