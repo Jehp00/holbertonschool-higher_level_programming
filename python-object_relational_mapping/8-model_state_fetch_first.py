@@ -25,4 +25,6 @@ if __name__ == '__main__':
     if Query is not None:
         print(f"{Query.id}: {Query.name}")
 
+    else:
+        print("Nothing")
     session.close()
