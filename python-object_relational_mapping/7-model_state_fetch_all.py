@@ -24,7 +24,7 @@ def model_state():
 
     # query python instances in database
     for instance in session.query(State).order_by(State.id):
-        print("{:d}: {:s}".format(instance.id, instance.name))
+        print("{}: {}".format(instance.id, instance.name))
 
     session.close()
 
