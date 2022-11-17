@@ -20,6 +20,7 @@ if __name__ == '__main__':
     session = Session()
 
     Query = session.query(State).filter(State.id==2).first()
+
     Query.name = "New Mexico"
 
     session.commit()
