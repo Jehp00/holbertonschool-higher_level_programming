@@ -23,6 +23,6 @@ if __name__ == '__main__':
     Query = session.query(State).first()
 
     if Query is not None:
-        print(f"{Query.id}")
+        print(f"{Query.id}: {Query.name}")
 
     session.close()
