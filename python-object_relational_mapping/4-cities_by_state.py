@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-lists all states from the database hbtn_0e_0_usa
+lists all cities from the database hbtn_0e_4_usa
 """
 
 import sys
