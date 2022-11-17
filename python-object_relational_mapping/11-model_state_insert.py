@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""prints the State object with the name passed as
-argument from the database hbtn_0e_6_usa"""
+"""adds the State object “Louisiana” to the database hbtn_0e_6_usa"""
 from sqlalchemy import create_engine
 from model_state import Base, State
 import sys
@@ -24,4 +23,3 @@ if __name__ == '__main__':
     session.commit()
     print(new_state.id)
     session.close()
-
