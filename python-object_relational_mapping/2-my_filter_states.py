@@ -14,18 +14,18 @@ if __name__ == "__main__":
                                  user=sys.argv[1],
                                  passwd=sys.argv[2],
                                  db=sys.argv[3],
-                                 searched=sys.argv[4],
                                  charset='utf8')
     '''start the cursor'''
     cursor = connection.cursor()
 
     '''execute the query'''
-    cursor.execute("SELECT * FROM states WHERE name={} ORDER BY id ASC".format(searched))
+    cursor.execute("SELECT * FROM states WHERE name={} ORDER BY id ASC".format(sys.argv[4]))
     rows = cursor.fetchall()
 
     '''print the rows/queries'''
     for r in rows:
-        print(r)
+        if r[1] == sys.argv[4]:
+            print(r)
 
     '''Close the cursor'''
     cursor.close()
