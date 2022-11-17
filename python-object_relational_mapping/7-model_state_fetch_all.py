@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-if __name__ = '__main__':
+if __name__ = "__main__":
     '''Not imported'''
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format\
