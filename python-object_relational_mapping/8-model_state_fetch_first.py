@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
     session = Session()
 
-    Query = session.query(State).one(name=sys.argv[5])
+    Query = session.query(State).filter_by(name=sys.argv[5]).one()
 
     if Query is not None:
         print(f"{Query.id}")
