@@ -22,8 +22,10 @@ def model_state():
 
     session = Session()
 
+    Query = session.query(State).order_by(State.id).all()
+
     # query python instances in database
-    for instance in session.query(State).order_by(State.id):
+    for instance in Query:
         print("{}: {}".format(instance.id, instance.name))
 
     session.close()
