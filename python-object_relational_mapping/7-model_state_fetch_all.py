@@ -4,7 +4,7 @@
    from the database hbtn_0e_6_usa"""
 from sqlalchemy import create_engine
 from model_state import State, Base
-from sys import argv
+import sys
 from sqlalchemy.orm import sessionmaker
 
 
@@ -25,8 +25,8 @@ def model_state():
 
     query = session.query(State).order_by(State.id).all()
 
-    for record in query:
-        print("{}: {}".format(record.id, record.name))
+    for state in query:
+        print("{}: {}".format(state.id, state.name))
 
     session.close()
 
