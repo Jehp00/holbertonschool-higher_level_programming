@@ -5,7 +5,7 @@ contains the class definition of a City
 
 import sys
 from model_state import Base, State
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Foreignkey
 
 class City(Base):
     '''
