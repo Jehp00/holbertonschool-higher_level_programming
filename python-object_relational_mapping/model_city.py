@@ -7,7 +7,7 @@ import sys
 from model_state import Base, State
 from sqlalchemy import Column, Integer, String, Foreignkey
 
-class City(Base):
+class City(model_state.Base):
     '''
     City class inherited from Base
     Args:
