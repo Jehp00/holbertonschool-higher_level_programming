@@ -16,18 +16,15 @@ def model_state():
         sys.argv[3]),
         pool_pre_ping=True)
     Base.metadata.create_all(engine)
-    # associate it with our custom Session class
-    Session = sessionmaker()
 
-    # associate it with our custom Session class
-    Session.configure(bind=engine)
+    '''associate it with our custom Session class'''
+    Session = sessionmaker(bind=engine)
 
     session = Session()
 
-    query = session.query(State).order_by(State.id).all()
-
-    for state in query:
-        print("{}: {}".format(state.id, state.name))
+    # query python instances in database
+    for instance in session.query(State).order_by(State.id):
+        print("{:d}: {:s}".format(instance.id, instance.name))
 
     session.close()
 
