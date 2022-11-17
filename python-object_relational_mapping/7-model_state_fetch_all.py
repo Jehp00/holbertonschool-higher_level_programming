@@ -17,9 +17,7 @@ def model_state():
         pool_pre_ping=True)
     Base.metadata.create_all(engine)
     '''associate it with our custom Session class'''
-    Session = sessionmaker()
-
-    Session.configure(bind=engine)
+    Session = sessionmaker(bind=engine)
 
     session = Session()
 
