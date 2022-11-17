@@ -13,6 +13,6 @@ class City(Base):
     Args:
         Base class inherited'''
     __tablename__ = "cities"
-    id = Column('id', Integer, autoincrement=auto, nullable=False, primary_key=True, unique=True)
-    name = Column('name', String(128), nullable=False)
-    state_id = Column('state_id', Integer, nullable=False, Foreignkey=('states.id'))
+    id = Column(Integer, autoincrement=auto, nullable=False, primary_key=True, unique=True)
+    name = Column(String(128), nullable=False)
+    state_id = Column(Integer, nullable=False, Foreignkey=('states.id'))
