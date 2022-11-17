@@ -23,7 +23,8 @@ if __name__ == "__main__":
 
     '''print the rows/queries'''
     for r in rows:
-        print(r)
+        if r[1][0] == 'N':
+            print(r)
 
     '''Close the cursor'''
     cursor.close()
