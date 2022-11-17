@@ -17,17 +17,14 @@ def model_state():
         pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
-    # associate it with our custom Session class
-    Session = sessionmaker()
-
-    # associate it with our custom Session class
-    Session.configure(bind=engine)
+    '''associate it with our custom Session class'''
+    Session = sessionmaker(bind=engine)
 
     session = Session()
 
-    rows = session.query(State).order_by(State.id).all()
+    query = session.query(State).order_by(State.id).all()
 
-    for state in rows:
+    for record in query:
         print("{}: {}".format(state.id, state.name))
 
     session.close()
