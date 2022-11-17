@@ -18,7 +18,9 @@ if __name__ == "__main__":
     cursor = connection.cursor()
 
     '''execute the query'''
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT cities.id, cities.name, states.name \
+        FROM cities, states WHERE cities.state_id=states.id \
+        ORDER BY cities.id ASC")
     rows = cursor.fetchall()
 
     '''print the rows/queries'''
