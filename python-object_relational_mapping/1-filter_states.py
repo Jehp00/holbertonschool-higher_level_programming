@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-lists all states from the database hbtn_0e_0_usa
+lists all states from the database hbtn_0e_0_usa that starting with N
 """
 
 import sys
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     cursor = connection.cursor()
 
     '''execute the query'''
-    cursor.execute("SELECT * FROM states WHERE name LIKE '%N' ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
     rows = cursor.fetchall()
 
     '''print the rows/queries'''
