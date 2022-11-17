@@ -15,7 +15,7 @@ if __name__ == "__main__":
                                 db=sys.argv[3],
                                 charset='utf8')
     #start the cursor
-    cursor = conncection.cursor()
+    cursor = connection.cursor()
 
     #execute the query
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
