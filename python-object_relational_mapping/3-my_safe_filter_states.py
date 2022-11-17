@@ -22,7 +22,8 @@ if __name__ == "__main__":
     cursor = connection.cursor()
 
     '''execute the query'''
-    cursor.execute("SELECT * FROM states WHERE name=%s", (sys.argv[4], ))
+    cursor.execute("SELECT * FROM states WHERE name={} \
+        ORDER BY id ASC".format(str(sys.argv[4])))
     rows = cursor.fetchall()
 
     '''print the rows/queries'''
