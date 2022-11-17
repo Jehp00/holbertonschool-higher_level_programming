@@ -2,10 +2,10 @@
 #!/usr/bin/python3
 """cript that lists all State objects
    from the database hbtn_0e_6_usa"""
-from SQLAlchemy import create_engine
+from sqlalchemy import create_engine
 from model_state import Base, State
 import sys
-from SQLAlchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 
 def model_state():
