@@ -25,7 +25,7 @@ def model_state():
     query = session.query(State).order_by(State.id).all()
 
     for record in query:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(record.id, record.name))
 
     session.close()
 
