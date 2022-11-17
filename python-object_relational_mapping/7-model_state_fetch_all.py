@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-Lists all State objects from the database hbtn_0e_6_usa
-"""
+"""cript that lists all State objects
+   from the database hbtn_0e_6_usa"""
 
 
 import sys
@@ -11,6 +10,7 @@ from sqlalchemy.orm import sessionmaker
 
 
 def model_state():
+    """initializate function model_state for db"""
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format\
     (sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     '''start engine'''
