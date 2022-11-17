@@ -24,7 +24,6 @@ if __name__ == "__main__":
     #print the rows/queries
     for r in rows:
         print(r)
-        print("\n")
 
     #Close the cursor
     cursor.close()
