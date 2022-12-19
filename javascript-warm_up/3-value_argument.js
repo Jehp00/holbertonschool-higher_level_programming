@@ -3,7 +3,7 @@ const args = process.argv;
 let message;
 let len = 0;
 
-for (const arg in args) {
+while (len in args) {
   len += 1;
 }
 
