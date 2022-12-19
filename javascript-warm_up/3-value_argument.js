@@ -1,15 +1,15 @@
 #!/usr/bin/node
-const args = process.argv.slice(2);
-let count = 0;
-const messege = 'No argument';
+const args = process.argv;
+let message;
+let len = 0;
 
-for (count in args) {
-  count += 1;
+for (const arg in args) {
+  len += 1;
 }
 
-args.forEach(function (args) {
-  console.log(args);
-});
-if (count === 0) {
-  console.log(messege);
+if (len > 2) {
+  console.log(args[2]);
+} else {
+  message = 'No argument';
+  console.log(message);
 }
