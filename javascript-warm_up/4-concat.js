@@ -1,0 +1,12 @@
+#!/usr/bin/node
+const args = process.argv;
+let len = 0;
+
+while (len in args) {
+  len += 1;
+}
+if (len > 2) {
+  console.log(args[2] + ' is ' + args[3]);
+} else {
+  console.log('undefined is undefined');
+}
