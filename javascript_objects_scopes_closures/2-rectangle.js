@@ -1,17 +1,8 @@
-#!/usr/bin/node
-class Rectangle {
-  constructor (w, h) {
-    if (parseInt(w) <= 0 || w === undefined) {
-      w = {};
-      h = {};
+module.exports = class Rectangle {
+    constructor (w, h) {
+      if (w > 0 && h > 0) {
+        this.width = w;
+        this.height = h;
+      }
     }
-    if (parseInt(h) <= 0 || h === undefined) {
-      h = {};
-      w = {};
-    }
-    this.width = w;
-    this.height = h;
-  }
-}
-
-module.exports = Rectangle;
+  };
